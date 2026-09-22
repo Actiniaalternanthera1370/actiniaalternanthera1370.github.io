@@ -3,162 +3,478 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Security engineering, Python, detection engineering, infrastructure, and applied cybersecurity research." />
-  <title>Security Engineering Portfolio</title>
+  <meta name="theme-color" content="#071014" />
+  <meta name="description" content="Ryszard Bialach — security engineering, Python, detection engineering, secure infrastructure, cloud security, and applied cybersecurity research." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta property="og:title" content="Ryszard Bialach | Security Engineering" />
+  <meta property="og:description" content="A public-safe interactive portfolio exploring security engineering, detection, Python, cloud security, infrastructure, and applied research." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ryszard-bialach2.com/" />
+  <title>Ryszard Bialach | Security Engineering</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="wrap nav-wrap">
-      <a class="brand" href="#top">PORTFOLIO</a>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#research">Research</a>
-        <a href="#contact">Contact</a>
-      </nav>
+  <canvas id="network-bg" aria-hidden="true"></canvas>
+
+  <div id="boot" class="boot-screen" role="dialog" aria-modal="true" aria-labelledby="boot-title">
+    <div class="boot-panel">
+      <div class="boot-mark" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+      <p class="mono micro">PUBLIC ACCESS NODE // PORTFOLIO</p>
+      <h1 id="boot-title">Enter the environment.</h1>
+      <p class="boot-copy">
+        A guided view into how I approach security engineering:
+        validate the system, observe the behavior, question the signal, then build the control.
+      </p>
+      <div class="boot-progress" aria-hidden="true">
+        <div id="boot-progress-bar"></div>
+      </div>
+      <div class="boot-status mono" id="boot-status">initializing public-safe profile…</div>
+      <button id="enter-btn" class="btn primary" type="button">Enter environment</button>
+      <button id="skip-btn" class="text-btn" type="button">Skip animation</button>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <a class="identity" href="#top" aria-label="Ryszard Bialach home">
+      <span class="identity-dot"></span>
+      <span>RYSZARD BIALACH</span>
+    </a>
+
+    <nav aria-label="Primary navigation">
+      <a href="#mind">Mindmap</a>
+      <a href="#evidence">Evidence</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Connect</a>
+    </nav>
+
+    <div class="public-badge" title="Public-safe presentation: sensitive operational details are intentionally excluded.">
+      <span class="shield">◇</span>
+      PUBLIC VIEW
     </div>
   </header>
 
   <main id="top">
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div>
-          <p class="eyebrow">SECURITY ENGINEERING · PYTHON · DETECTION · INFRASTRUCTURE</p>
-          <h1>I build systems, secure them, instrument them, and analyze what they tell us.</h1>
-          <p class="lead">
-            Applied cybersecurity engineering focused on behavioral analytics,
-            detection workflows, automation, secure infrastructure, and reproducible research.
-          </p>
-          <div class="actions">
-            <a class="button primary" href="#projects">View projects</a>
-            <a class="button secondary" href="YOUR_GITHUB_URL_HERE" target="_blank" rel="noopener">GitHub</a>
-          </div>
+    <section class="hero shell">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">SECURITY ENGINEERING · DETECTION · PYTHON · INFRASTRUCTURE</p>
+        <h1>
+          Step inside a
+          <span class="gradient-word">security engineering mind.</span>
+        </h1>
+        <p class="lead">
+          I build systems, secure them, instrument them, and study what their behavior reveals.
+          My work sits where security operations, software engineering, infrastructure,
+          cloud telemetry, and applied research meet.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="#mind">Explore capability map</a>
+          <a class="btn ghost" href="#evidence">See the evidence</a>
         </div>
 
-        <div class="hero-card">
-          <span class="status-dot"></span>
-          <p class="card-label">CURRENT FOCUS</p>
-          <h2>Turning security research into production-ready detection tooling.</h2>
-          <p>
-            Research → validation → feature engineering → behavioral baselines →
-            analyst triage → evidence.
-          </p>
+        <div class="hero-signals" aria-label="Professional focus areas">
+          <span>Behavioral analytics</span>
+          <span>Security automation</span>
+          <span>Cloud security</span>
+          <span>Detection engineering</span>
+          <span>Secure AI infrastructure</span>
         </div>
       </div>
+
+      <aside class="system-card reveal delay-1" aria-label="Current focus">
+        <div class="card-head">
+          <span class="pulse"></span>
+          <span class="mono micro">CURRENT FOCUS // ACTIVE</span>
+        </div>
+        <h2>Research → production security tooling.</h2>
+        <p>
+          Converting security research into reproducible pipelines,
+          analyst-facing evidence, policy validation, and operational controls.
+        </p>
+
+        <div class="signal-grid">
+          <div>
+            <span class="metric-label">MODE</span>
+            <strong>BUILD + VALIDATE</strong>
+          </div>
+          <div>
+            <span class="metric-label">BIAS</span>
+            <strong>EVIDENCE FIRST</strong>
+          </div>
+          <div>
+            <span class="metric-label">OUTPUT</span>
+            <strong>DEFENSIBLE CONTROLS</strong>
+          </div>
+          <div>
+            <span class="metric-label">STATUS</span>
+            <strong>LEARNING</strong>
+          </div>
+        </div>
+      </aside>
     </section>
 
-    <section id="about" class="section">
-      <div class="wrap narrow">
-        <p class="section-kicker">ABOUT</p>
-        <h2>Engineering-minded security work.</h2>
-        <p class="body-copy">
-          My work combines cybersecurity analysis with software engineering and infrastructure.
-          I am interested in systems that are measurable, testable, explainable, and useful to
-          the people operating them.
+    <section class="principle-band">
+      <div class="shell principle-grid">
+        <div class="mono micro">OPERATING PRINCIPLE</div>
+        <blockquote>
+          “An anomaly is a question worth asking, not an incident verdict.”
+        </blockquote>
+        <p>
+          Good security work is not about producing the loudest alert.
+          It is about producing the most defensible next action.
         </p>
       </div>
     </section>
 
-    <section id="projects" class="section alt">
-      <div class="wrap">
-        <p class="section-kicker">FEATURED WORK</p>
-        <h2>Projects designed to show the work, not just describe it.</h2>
-
-        <div class="cards">
-          <article class="project-card featured">
-            <div class="tag-row">
-              <span>Python</span>
-              <span>NetFlow</span>
-              <span>Detection Engineering</span>
-              <span>ML</span>
-            </div>
-            <h3>NetFlow Behavioral Analytics & Anomaly Triage</h3>
-            <p>
-              A research-oriented network telemetry project that separates data-quality issues,
-              behavioral anomalies, and confirmed security findings. Includes robust profiling,
-              host concentration and entropy analysis, Isolation Forest triage, sensitivity testing,
-              and analyst-facing explanations.
-            </p>
-            <div class="project-links">
-              <a href="#">Source code →</a>
-              <a href="#">Research notebook →</a>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="tag-row">
-              <span>Infrastructure</span>
-              <span>Security</span>
-              <span>Automation</span>
-            </div>
-            <h3>Secure Infrastructure Lab</h3>
-            <p>
-              A practical environment for segmentation, telemetry, automation, governance,
-              and controlled security experimentation.
-            </p>
-            <a href="#">Project details →</a>
-          </article>
-
-          <article class="project-card">
-            <div class="tag-row">
-              <span>Python</span>
-              <span>Web Security</span>
-              <span>Testing</span>
-            </div>
-            <h3>Secure Application Engineering</h3>
-            <p>
-              Secure software design work emphasizing identity, permissions, validation,
-              testing, logging, and operational controls.
-            </p>
-            <a href="#">Project details →</a>
-          </article>
-        </div>
+    <section id="mind" class="section shell">
+      <div class="section-heading reveal">
+        <p class="eyebrow">CAPABILITY MAP</p>
+        <h2>Explore the systems behind the résumé.</h2>
+        <p>
+          Select a node. Each one opens the professional evidence behind the skill,
+          without exposing unnecessary operational or personal detail.
+        </p>
       </div>
-    </section>
 
-    <section id="research" class="section">
-      <div class="wrap split">
-        <div>
-          <p class="section-kicker">RESEARCH</p>
-          <h2>Evidence before conclusions.</h2>
+      <div class="mind-layout">
+        <div class="mindmap reveal" id="mindmap">
+          <svg class="mind-lines" viewBox="0 0 800 620" aria-hidden="true">
+            <line x1="400" y1="310" x2="400" y2="92"></line>
+            <line x1="400" y1="310" x2="660" y2="190"></line>
+            <line x1="400" y1="310" x2="660" y2="430"></line>
+            <line x1="400" y1="310" x2="400" y2="540"></line>
+            <line x1="400" y1="310" x2="140" y2="430"></line>
+            <line x1="400" y1="310" x2="140" y2="190"></line>
+          </svg>
+
+          <button class="mind-node core" data-capability="core" style="--x:50%; --y:50%;">
+            <span>SECURITY</span>
+            <strong>ENGINEERING</strong>
+          </button>
+
+          <button class="mind-node" data-capability="detection" style="--x:50%; --y:14%;">
+            <span>Detection</span>
+            <strong>Engineering</strong>
+          </button>
+
+          <button class="mind-node" data-capability="cloud" style="--x:82%; --y:31%;">
+            <span>Cloud</span>
+            <strong>Security</strong>
+          </button>
+
+          <button class="mind-node" data-capability="python" style="--x:82%; --y:70%;">
+            <span>Python</span>
+            <strong>Automation</strong>
+          </button>
+
+          <button class="mind-node" data-capability="infrastructure" style="--x:50%; --y:88%;">
+            <span>Secure</span>
+            <strong>Infrastructure</strong>
+          </button>
+
+          <button class="mind-node" data-capability="soc" style="--x:18%; --y:70%;">
+            <span>Security</span>
+            <strong>Operations</strong>
+          </button>
+
+          <button class="mind-node" data-capability="ai" style="--x:18%; --y:31%;">
+            <span>AI</span>
+            <strong>Governance</strong>
+          </button>
         </div>
-        <div>
-          <p class="body-copy">
-            I approach security analytics as an evidence problem. Measurements are validated
-            before interpretation, anomalies are treated as investigation candidates rather
-            than verdicts, and model assumptions are documented instead of hidden.
+
+        <aside class="evidence-panel reveal delay-1" id="capability-panel" aria-live="polite">
+          <div class="panel-topline">
+            <span class="mono micro">SELECTED NODE</span>
+            <span id="panel-code" class="mono micro">SE-00</span>
+          </div>
+          <h3 id="panel-title">Security Engineering</h3>
+          <p id="panel-summary">
+            I work across controls, systems, code, telemetry, and operations rather than treating
+            security as a single tool or product.
           </p>
-          <blockquote>
-            “An anomaly is a question worth asking, not an incident verdict.”
-          </blockquote>
+          <div id="panel-proof" class="proof-list"></div>
+          <div id="panel-tools" class="chip-row"></div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="evidence" class="section section-dark">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">EVIDENCE DECK</p>
+          <h2>Work that can be inspected.</h2>
+          <p>
+            Public case files emphasize methodology, architecture, and outcomes.
+            Sensitive topology, secrets, private identifiers, and live control details are intentionally withheld.
+          </p>
+        </div>
+
+        <div class="case-grid">
+          <article class="case-card reveal">
+            <div class="case-meta">
+              <span class="case-id mono">CASE // NF-03</span>
+              <span class="case-state">RESEARCH</span>
+            </div>
+            <h3>Behavioral NetFlow Analytics & Anomaly Triage</h3>
+            <p>
+              Rebuilt an earlier flow-analysis project into a research-grade behavioral investigation:
+              data validation, robust statistics, host concentration, normalized entropy,
+              Isolation Forest triage, model sensitivity testing, and analyst-facing explanations.
+            </p>
+            <div class="chip-row">
+              <span>Python</span><span>Pandas</span><span>scikit-learn</span><span>NetFlow</span><span>Detection</span>
+            </div>
+            <button class="case-toggle" type="button" aria-expanded="false">
+              Open case file
+            </button>
+            <div class="case-details">
+              <div class="detail-row">
+                <span>QUESTION</span>
+                <p>How do we separate malformed telemetry, unusual behavior, and evidence of actual security risk?</p>
+              </div>
+              <div class="detail-row">
+                <span>METHOD</span>
+                <p>Schema validation → feature engineering → baseline characterization → anomaly ranking → sensitivity analysis.</p>
+              </div>
+              <div class="detail-row">
+                <span>LESSON</span>
+                <p>An impossible port is first a data-quality problem; an anomaly is first an investigation candidate.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="case-card reveal delay-1">
+            <div class="case-meta">
+              <span class="case-id mono">CASE // INF-04</span>
+              <span class="case-state">LAB</span>
+            </div>
+            <h3>Segmented Security & AI Infrastructure</h3>
+            <p>
+              Built a segmented lab to study firewall policy, virtualization, telemetry,
+              governed local AI workers, observability, and controlled service communication.
+            </p>
+            <div class="chip-row">
+              <span>OPNsense</span><span>Proxmox</span><span>Linux</span><span>VLANs</span><span>Observability</span>
+            </div>
+            <button class="case-toggle" type="button" aria-expanded="false">
+              Open case file
+            </button>
+            <div class="case-details">
+              <div class="detail-row">
+                <span>DESIGN</span>
+                <p>Network segmentation separates management, workstations, servers, and governed AI workloads.</p>
+              </div>
+              <div class="detail-row">
+                <span>CONTROL</span>
+                <p>AI workers operate without direct public Internet access; approved paths are benchmarked and validated.</p>
+              </div>
+              <div class="detail-row">
+                <span>PUBLIC VIEW</span>
+                <p>Architecture is intentionally sanitized; operational addresses and control-plane details are not published.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="case-card reveal">
+            <div class="case-meta">
+              <span class="case-id mono">CASE // APP-02</span>
+              <span class="case-state">ENGINEERING</span>
+            </div>
+            <h3>Secure Application & Automation Patterns</h3>
+            <p>
+              Applied secure software patterns around identity, least privilege,
+              controlled automation, logging, testing, CRUD workflows, and PostgreSQL-backed governance.
+            </p>
+            <div class="chip-row">
+              <span>Django</span><span>Python</span><span>PostgreSQL</span><span>RBAC</span><span>Testing</span>
+            </div>
+            <button class="case-toggle" type="button" aria-expanded="false">
+              Open case file
+            </button>
+            <div class="case-details">
+              <div class="detail-row">
+                <span>FOCUS</span>
+                <p>Separate human, service, manager, and worker identities with attributable actions and explicit permissions.</p>
+              </div>
+              <div class="detail-row">
+                <span>METHOD</span>
+                <p>Desired-state architecture plus as-built reconciliation, deterministic tests, evidence capture, and review.</p>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section alt">
-      <div class="wrap contact">
-        <div>
-          <p class="section-kicker">CONTACT</p>
-          <h2>Interested in security engineering, detection, automation, or infrastructure?</h2>
+    <section id="credentials" class="section shell">
+      <div class="section-heading reveal">
+        <p class="eyebrow">CREDENTIAL SIGNALS</p>
+        <h2>Validated foundations.</h2>
+        <p>
+          Credential IDs and unnecessary verification metadata are not exposed in the public page.
+        </p>
+      </div>
+
+      <div class="credential-grid">
+        <article class="credential reveal">
+          <div class="credential-icon">C+</div>
+          <div>
+            <p class="mono micro">CERTIFICATION</p>
+            <h3>CompTIA CySA+</h3>
+            <p>Cybersecurity analytics, threat detection, vulnerability management, incident response, and security operations.</p>
+          </div>
+        </article>
+
+        <article class="credential reveal delay-1">
+          <div class="credential-icon">CC</div>
+          <div>
+            <p class="mono micro">CERTIFICATION</p>
+            <h3>CSA Certificate of Cloud Security Knowledge</h3>
+            <p>Cloud security architecture, governance, risk, controls, and shared-responsibility concepts.</p>
+          </div>
+        </article>
+
+        <article class="credential reveal">
+          <div class="credential-icon">BS</div>
+          <div>
+            <p class="mono micro">EDUCATION</p>
+            <h3>B.S. Computer Networking & Security</h3>
+            <p>Networking and security foundation with digital-forensics emphasis.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="section section-dark">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">SELECTED EXPERIENCE</p>
+          <h2>The work behind the capability map.</h2>
+          <p>
+            The public site presents role themes and technical scope rather than a scrape-ready employment ledger.
+            A complete résumé can be provided through the professional contact path.
+          </p>
         </div>
-        <div class="contact-links">
-          <a href="mailto:ryszardbialach2.cybersecurity@gmail.com">Email</a>
-          <a href="https://linkedin.com/in/cyberforensync" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://github.com/rbcommoncents" target="_blank" rel="noopener">GitHub</a>
-          <a href="" target="_blank" rel="noopener">Resume</a>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-side">
+              <span class="mono micro">CLOUD SECURITY</span>
+              <span>Professional experience</span>
+            </div>
+            <div class="timeline-body">
+              <h3>Cloud Security Specialist</h3>
+              <p>
+                Security monitoring and administration across cloud, SIEM, endpoint, and Zero Trust workflows.
+                Experience included AWS security telemetry, centralized logging, endpoint tooling, and operational follow-through.
+              </p>
+              <div class="chip-row">
+                <span>AWS</span><span>GuardDuty</span><span>CloudTrail</span><span>Sumo Logic</span><span>Rapid7</span><span>CrowdStrike</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal delay-1">
+            <div class="timeline-marker"></div>
+            <div class="timeline-side">
+              <span class="mono micro">SECURITY OPERATIONS</span>
+              <span>Leadership + incident operations</span>
+            </div>
+            <div class="timeline-body">
+              <h3>SOC Coordination & Supervision</h3>
+              <p>
+                Oversight of monitoring, incident response, team coordination, multi-site security operations,
+                reporting, and escalation in operational environments.
+              </p>
+              <div class="chip-row">
+                <span>Incident Response</span><span>Monitoring</span><span>Operations</span><span>Team Leadership</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-side">
+              <span class="mono micro">CURRENT BUILD</span>
+              <span>Independent engineering</span>
+            </div>
+            <div class="timeline-body">
+              <h3>Security Engineering, Python & Governed AI Systems</h3>
+              <p>
+                Building repeatable analysis pipelines, secure infrastructure, local AI governance patterns,
+                benchmark-driven controls, and analyst-friendly evidence workflows.
+              </p>
+              <div class="chip-row">
+                <span>Python</span><span>Linux</span><span>Django</span><span>PostgreSQL</span><span>Automation</span><span>AI Governance</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell">
+      <div class="boundary-card reveal">
+        <div>
+          <p class="eyebrow">SECURITY BY PRESENTATION</p>
+          <h2>Some details are missing on purpose.</h2>
+        </div>
+        <div>
+          <p>
+            This public portfolio is designed to demonstrate professional capability without publishing
+            credential identifiers, phone numbers, private infrastructure addresses, complete internal topology,
+            secrets, personal location data, or a full machine-readable employment history.
+          </p>
+          <p class="muted">
+            Public visibility is useful. Unnecessary exposure is not.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="shell contact-grid reveal">
+        <div>
+          <p class="eyebrow">PROFESSIONAL CONTACT</p>
+          <h2>If the work is relevant, continue the conversation.</h2>
+          <p>
+            Security engineering · detection engineering · security automation · infrastructure · Python.
+          </p>
+        </div>
+
+        <div class="contact-actions">
+          <a class="btn primary" href="https://github.com/rbcommoncents" target="_blank" rel="noopener noreferrer">
+            GitHub profile
+          </a>
+          <a id="linkedin-link" class="btn ghost" href="#" target="_blank" rel="noopener noreferrer" hidden>
+            LinkedIn
+          </a>
+          <button id="resume-request" class="btn ghost" type="button">Résumé availability</button>
+          <p id="resume-note" class="resume-note" hidden>
+            A detailed résumé is intentionally not embedded in this public page. Use the configured professional contact channel to request it.
+          </p>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="wrap footer-wrap">
-      <span>Security Engineering Portfolio</span>
-      <span>© <span id="year"></span></span>
+    <div class="shell footer-grid">
+      <div>
+        <strong>Ryszard Bialach</strong>
+        <span>Security Engineering Portfolio</span>
+      </div>
+      <div class="mono micro">
+        PUBLIC-SAFE BUILD // <span id="year"></span>
+      </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
