@@ -951,3 +951,22 @@ footer {
 
   #network-bg { display: none; }
 }
+
+
+/* =========================================================
+   v2.1 reliability patch
+   Critical interactive content must never depend on a
+   scroll animation to be visible.
+   ========================================================= */
+
+.mind-layout .mindmap,
+.mind-layout .evidence-panel {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* If reveal scripting is delayed or blocked, content remains usable. */
+.reveal.reveal-fallback {
+  opacity: 1 !important;
+  transform: none !important;
+}

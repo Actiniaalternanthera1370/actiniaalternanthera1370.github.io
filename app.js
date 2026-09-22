@@ -136,7 +136,19 @@ function setupBoot() {
   function closeBoot() {
     boot.classList.add("hidden");
     sessionStorage.setItem("mindscape-entered", "true");
-    setTimeout(() => boot.remove(), 650);
+
+    setTimeout(() => {
+      boot.remove();
+
+      // If the visitor arrived via #mind, #evidence, etc.,
+      // settle the page at the intended section after the overlay is gone.
+      if (window.location.hash) {
+        const target = document.querySelector(window.location.hash);
+        if (target) {
+          target.scrollIntoView({ block: "start" });
+        }
+      }
+    }, 650);
   }
 
   enter.addEventListener("click", closeBoot);
@@ -209,6 +221,10 @@ function setupCases() {
 function setupReveal() {
   const items = $$(".reveal");
 
+  // Critical map content is visible regardless of animation state.
+  const critical = [$("#mindmap"), $("#capability-panel")].filter(Boolean);
+  critical.forEach(el => el.classList.add("visible"));
+
   if (!("IntersectionObserver" in window)) {
     items.forEach(el => el.classList.add("visible"));
     return;
@@ -223,10 +239,22 @@ function setupReveal() {
         }
       });
     },
-    { threshold: 0.12 }
+    {
+      threshold: 0.04,
+      rootMargin: "0px 0px 120px 0px"
+    }
   );
 
   items.forEach(el => observer.observe(el));
+
+  // Reliability fallback: animation must never hide content permanently.
+  window.setTimeout(() => {
+    items.forEach(el => {
+      if (!el.classList.contains("visible")) {
+        el.classList.add("reveal-fallback");
+      }
+    });
+  }, 1400);
 }
 
 function setupContact() {
