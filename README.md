@@ -1,4 +1,4 @@
-# Cyber Mindscape Portfolio — Version 2
+# Cyber Mindscape Portfolio — Version 2.2 — Recruiter SEO
 
 This is a static, privacy-conscious GitHub Pages portfolio for `ryszard-bialach2.com`.
 
@@ -69,3 +69,19 @@ Important: no public webpage can be made impossible to scrape. The practical con
 4. Project screenshots
 5. Open Graph social preview image
 6. Optional case-study pages under `/projects/`
+
+
+## v2.1 reliability fix
+
+This release fixes a rendering condition where the capability map and its
+evidence panel could remain invisible because the scroll-reveal observer had
+not promoted the large elements from `opacity: 0`.
+
+The capability map is now critical content and always renders. Scroll animation
+is treated as progressive enhancement, with a timed fallback for every other
+reveal element. Hash navigation is also restored after the entry overlay closes.
+
+
+## v2.2 recruiter SEO layer
+
+Added recruiter-intent metadata, canonical URLs, ProfilePage/Person JSON-LD, natural target-role language, three crawlable cybersecurity case-study pages, internal links, robots.txt, sitemap.xml, and a public-safe security.txt. No phone number, exact location, credential IDs, private infrastructure, or secrets are included.

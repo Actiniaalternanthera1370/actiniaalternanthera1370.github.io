@@ -970,3 +970,31 @@ footer {
   opacity: 1 !important;
   transform: none !important;
 }
+
+
+/* v2.2 recruiter SEO + semantic discovery layer */
+.search-profile { padding: 72px 0; }
+.search-profile-grid { display:grid; grid-template-columns:.9fr 1.1fr; gap:54px; align-items:start; }
+.search-profile-grid h2 { margin:0; font-size:clamp(2.2rem,4.2vw,4rem); line-height:1.02; letter-spacing:-.045em; }
+.search-profile-grid p { margin-top:0; color:var(--muted); font-size:1.02rem; }
+.role-index { display:flex; flex-wrap:wrap; gap:9px; margin-top:24px; }
+.role-index span { padding:7px 11px; border:1px solid var(--line); border-radius:999px; background:rgba(7,19,23,.66); color:#b6cbc7; font-size:.79rem; }
+.case-link { display:inline-flex; margin-top:22px; margin-right:18px; color:var(--cyan); font-weight:800; }
+.case-link:hover { color:var(--teal); }
+.noscript-banner { padding:12px 20px; background:#11272d; border-bottom:1px solid rgba(109,225,203,.25); color:#d7ece7; font-size:.9rem; text-align:center; }
+.project-page { min-height:100vh; }
+.project-hero { padding:105px 0 60px; }
+.project-hero h1 { max-width:960px; margin:0; font-size:clamp(3rem,7vw,6.4rem); line-height:.95; letter-spacing:-.06em; }
+.project-lead { max-width:800px; margin-top:26px; color:var(--muted); font-size:1.1rem; }
+.project-body { padding:40px 0 100px; }
+.project-body-grid { display:grid; grid-template-columns:1fr 300px; gap:58px; }
+.project-body h2 { margin-top:54px; font-size:2rem; letter-spacing:-.035em; }
+.project-body h2:first-child { margin-top:0; }
+.project-body p, .project-body li { color:#afc2be; }
+.project-aside { position:sticky; top:95px; align-self:start; padding:22px; border:1px solid var(--line); border-radius:14px; background:rgba(7,19,23,.72); }
+.project-aside dl { margin:0; }
+.project-aside dt { margin-top:18px; color:var(--teal); font:700 .68rem/1.3 "SFMono-Regular",Consolas,monospace; letter-spacing:.1em; }
+.project-aside dt:first-child { margin-top:0; }
+.project-aside dd { margin:5px 0 0; color:#c2d3d0; }
+.back-link { display:inline-flex; margin-bottom:28px; color:var(--teal); font-weight:800; }
+@media (max-width:900px) { .search-profile-grid,.project-body-grid { grid-template-columns:1fr; } .project-aside { position:static; } }

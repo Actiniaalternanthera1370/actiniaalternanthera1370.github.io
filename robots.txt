@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ryszard-bialach2.com/sitemap.xml
